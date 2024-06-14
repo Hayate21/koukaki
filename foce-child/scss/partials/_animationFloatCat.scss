@@ -1,0 +1,11 @@
+// Import des mixins pour les animations de flottement des éléments de menu cat
+@import '../utils/mixinsFloatCat';
+
+// Animation de flottement pour les éléments de menu cat
+.menu-items .menu-items__container {
+  #catMenuBleu,
+  #catMenuOrange,
+  #catMenuBlack {
+    @include floatCat; // Utilisation du mixin floatCat
+  }
+}

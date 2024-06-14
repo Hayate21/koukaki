@@ -1,0 +1,67 @@
+// Définition des chemins des images
+$cheminImageSunflower: "../assets/images/Sunflower.png";
+$cheminImageOrchid: "../assets/images/orchid.png";
+$cheminImagePlace: "../assets/images/orange_oscar_bg.png";
+
+// Styles pour l'image de nomination
+.oscar__nomination-img {
+  width: 25%; // Largeur de l'image
+}
+
+// Styles pour le texte de nomination
+.oscar__nomination-text {
+  background-image: url($cheminImagePlace); // Image de fond du texte de nomination
+  font-size: 35px !important; // Taille de police du texte de nomination
+}
+
+// Styles pour l'élément Oscar
+.oscar {
+  position: relative; // Position relative pour permettre le positionnement absolu des éléments enfants
+  display: flex; // Affichage en mode flexbox
+  margin: 10% 10% 0; // Marge extérieure pour l'espacement
+  justify-content: center; // Centrage horizontal des enfants
+  align-items: center; // Centrage vertical des enfants
+}
+
+// Styles pour les pseudos-éléments avant et après de l'élément Oscar
+.oscar::before,
+.oscar::after {
+  content: ""; // Contenu vide requis pour afficher le pseudo-élément
+  background-size: cover; // Redimensionne l'image de fond pour couvrir l'élément
+  position: absolute; // Position absolue pour positionner les éléments
+  width: 180px; // Largeur des éléments
+  height: 180px; // Hauteur des éléments
+}
+
+// Style pour le pseudo-élément avant de l'élément Oscar
+.oscar::before {
+  background-image: url($cheminImageSunflower); // Image de fond du pseudo-élément avant
+  left: -144px; // Positionnement à gauche de l'élément parent
+  top: -96px; // Positionnement en haut de l'élément parent
+}
+
+// Style pour le pseudo-élément après de l'élément Oscar
+.oscar::after {
+  background-image: url($cheminImageOrchid); // Image de fond du pseudo-élément après
+  right: -210px; // Positionnement à droite de l'élément parent
+  top: -128px; // Positionnement en haut de l'élément parent
+}
+
+// Media queries pour les ajustements de la taille de police du texte de nomination selon la largeur de l'écran
+@media (max-width: 1100px) {
+  .oscar__nomination-text {
+    font-size: 152%; // Taille de police à 152% pour les écrans jusqu'à 1100px de largeur
+  }
+}
+
+@media (max-width: 900px) {
+  .oscar__nomination-text {
+    font-size: 122%; // Taille de police à 122% pour les écrans jusqu'à 900px de largeur
+  }
+}
+
+@media (max-width: 580px) {
+  .oscar__nomination-text {
+    font-size: 110%; // Taille de police à 110% pour les écrans jusqu'à 580px de largeur
+  }
+}

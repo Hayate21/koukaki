@@ -1,0 +1,47 @@
+// Import des mixins pour les animations de fondu
+@import "../utils/mixinsFadeIn";
+
+// Animation pour la vidéo de la bannière lors du défilement vers le bas
+.banner__video {
+  @include keyFrames(-200px, AnimationToDown, 100%);
+}
+
+// Animation pour la vidéo de secours de la bannière lors du défilement vers le haut
+.banner__video-fallback {
+  @include keyFrames(200px, AnimationToUp, 100%);
+}
+
+// Animation pour le logo en parallaxe de la bannière lors du défilement vers le haut
+.banner__parallaxe-logo {
+  @include keyFrames(200px, animationToUp, 100%);
+}
+
+// Animation pour les éléments de l'histoire lors du défilement vers le haut
+.story {
+  @include keyFrames(200px, AnimationToUp, 100%);
+}
+
+// Animation pour les paragraphes de l'article de l'histoire et du lieu lors du défilement vers le bas
+.story__article p, .story__place p {
+  @include keyFrames(-200px, AnimationToDown, 100%);
+}
+
+// Animation pour la section du studio lors du défilement vers le haut
+#studio {
+  @include keyFrames(200px, AnimationToUp, 100%);
+}
+
+// Animation pour les paragraphes de la section du studio lors du défilement vers le bas
+#studio div p {
+  @include keyFrames(-200px, AnimationToDown, 100%);
+}
+
+// Animation pour la section Oscar lors du défilement vers le haut
+.oscar {
+  @include keyFrames(200px, AnimationToUp, 100%);
+}
+
+// Animation pour le pied de page du site lors du défilement vers le haut
+.site-footer {
+  @include keyFrames(200px, AnimationToUp, 100%);
+}

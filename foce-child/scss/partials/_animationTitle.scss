@@ -1,0 +1,29 @@
+// Import des mixins pour les animations de fondu
+@import "../utils/mixinsFadeIn";
+
+// Durée de l'animation des titres
+$titleSpeed: 2s;
+
+// Opacité initiale des titres à 0
+.Animetitre,
+.Animetitre2 {
+  opacity: 0;
+}
+
+// Animation de fondu pour les titres
+.animateTitle,
+.animateTitle2 {
+  display: inline-block;
+  position: relative;
+  opacity: 1;
+}
+
+// Animation de fondu vers le bas pour animateTitle
+.animateTitle {
+  @include keyFrames(100px, fadeInDown, 100%, $titleSpeed); // Utilisation du mixin keyFrames
+}
+
+// Animation de fondu vers le bas pour animateTitle2
+.animateTitle2 {
+  @include keyFrames(100px, fadeInDown, 200%, $titleSpeed); // Utilisation du mixin keyFrames
+}

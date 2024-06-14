@@ -1,0 +1,42 @@
+// Styles pour la classe .swiper
+.swiper {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+  width: 1440px; // Largeur fixe
+  max-width: 100%; // Largeur maximale
+
+  &-slide {
+    background-position: center;
+    background-size: cover;
+    margin-right: 50px;
+    margin-left: 50px;
+
+    img {
+      display: block;
+      max-width: 380px; // Largeur maximale pour les images
+    }
+  }
+}
+
+// Styles pour l'élément #characters
+#characters {
+  display: flex;
+  flex-direction: column; // Orientation verticale pour les enfants
+
+  &__titreh3 {
+    width: 70%; // Largeur à 70% par défaut
+
+    @media (max-width: 1000px) {
+      width: 100%; // Largeur à 100% si la largeur maximale est inférieure à 1000px
+    }
+
+    @media (max-width: 700px) {
+      width: 105%; // Largeur à 105% si la largeur maximale est inférieure à 700px
+    }
+
+    @media (max-width: 550px) {
+      width: 104%; // Largeur à 104% si la largeur maximale est inférieure à 550px
+    }
+  }
+}

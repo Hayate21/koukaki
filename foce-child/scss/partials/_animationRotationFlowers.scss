@@ -1,0 +1,65 @@
+// Import des mixins pour les animations de rotation des fleurs
+@import "../utils/mixinsRotationFlowers";
+
+// Durée de l'animation des fleurs
+$speedFlower: 5s;
+
+// Animation de rotation des fleurs pour le footer du site
+.site-footer {
+  &::before,
+  &::after {
+    content: "";
+  }
+
+  ul::after,
+  ::before,
+  ::after {
+    @include rotationFleurs($speedFlower); // Utilisation du mixin rotationFleurs
+  }
+}
+
+// Animation de rotation des fleurs pour les articles de la story
+.story__article::after,
+.story h2::after {
+  @include rotationFleurs($speedFlower); // Utilisation du mixin rotationFleurs
+}
+
+// Ajustement de l'origine de la transformation pour les h2 de la story
+.story h2::after {
+  transform-origin: 77px 77px;
+}
+
+// Animation de rotation des fleurs pour les éléments de menu
+.menu-items .menu-items__container {
+  #fleurMenuSunFlower,
+  #fleurMenuOrchid,
+  #fleurMenuHibiscus,
+  #fleurMenuRandom,
+  #fleurMenuFlower {
+    @include rotationFleurs($speedFlower); // Utilisation du mixin rotationFleurs
+  }
+}
+
+// Animation de rotation des fleurs pour les h2 dans le studio
+#studio {
+  h2 {
+    &::before,
+    &::after {
+      @include rotationFleurs($speedFlower); // Utilisation du mixin rotationFleurs
+    }
+
+    &::before {
+      transform-origin: 101.5px 99.5px; // Ajustement de l'origine de la transformation pour ::before
+    }
+
+    &::after {
+      transform-origin: 54px 53px; // Ajustement de l'origine de la transformation pour ::after
+    }
+  }
+}
+
+// Animation de rotation des fleurs pour l'élément oscar
+.oscar::before,
+.oscar::after {
+  @include rotationFleurs($speedFlower); // Utilisation du mixin rotationFleurs
+}

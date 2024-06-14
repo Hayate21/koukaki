@@ -1,0 +1,7 @@
+// Import des mixins pour les animations de flottement
+@import "../utils/mixinsFloat";
+
+// Animation de flottement pour la classe .float
+.float {
+  @include floatLogo; // Utilisation du mixin floatLogo
+}
